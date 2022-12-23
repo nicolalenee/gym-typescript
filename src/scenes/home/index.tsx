@@ -14,13 +14,13 @@ type Props = {
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
       <motion.div
-        className="md: mx-auto flex w-5/6 items-center justify-center md:h-5/6"
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
@@ -42,12 +42,14 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img alt="home-page-text" src={HomePageText} />
               </div>
             </div>
+
             <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
-              Studios to get the Body Shapes That you Dream of... Get Your Dream
+              Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
           </motion.div>
+
           {/* ACTIONS */}
           <motion.div
             className="mt-8 flex items-center gap-8"
@@ -72,6 +74,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </AnchorLink>
           </motion.div>
         </div>
+
         {/* IMAGE */}
         <div
           className="flex basis-3/5 justify-center md:z-10
@@ -80,11 +83,12 @@ const Home = ({ setSelectedPage }: Props) => {
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
       </motion.div>
+
       {/* SPONSORS */}
       {isAboveMediumScreens && (
         <div className="h-[150px] w-full bg-primary-100 py-10">
           <div className="mx-auto w-5/6">
-            <div className="w-35 items-cetner flex justify-between gap-8">
+            <div className="flex w-3/5 items-center justify-between gap-8">
               <img alt="redbull-sponsor" src={SponsorRedBull} />
               <img alt="forbes-sponsor" src={SponsorForbes} />
               <img alt="fortune-sponsor" src={SponsorFortune} />
